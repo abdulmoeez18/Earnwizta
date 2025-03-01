@@ -115,6 +115,15 @@
             color: red;
             font-weight: bold;
         }
+        .add-to-cart {
+            background-color: red;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -138,13 +147,25 @@
     <section class="products">
         <script>
             const productContainer = document.querySelector('.products');
-            for(let i = 1; i <= 100; i++) {
+            const products = [
+                {name: "Men's T-Shirt", image: "https://source.unsplash.com/200x200/?tshirt", price: 1200},
+                {name: "Women's Dress", image: "https://source.unsplash.com/200x200/?dress", price: 2500},
+                {name: "Denim Jeans", image: "https://source.unsplash.com/200x200/?jeans", price: 3200},
+                {name: "Pakistani Suit", image: "https://source.unsplash.com/200x200/?pakistani,suit", price: 4500},
+                {name: "Kitchen Blender", image: "https://source.unsplash.com/200x200/?blender", price: 3500},
+                {name: "Makeup Kit", image: "https://source.unsplash.com/200x200/?makeup", price: 2800},
+                {name: "Sports Shoes", image: "https://source.unsplash.com/200x200/?shoes", price: 3800},
+            ];
+            
+            for(let i = 0; i < 100; i++) {
                 const product = document.createElement('div');
                 product.className = 'product';
+                let item = products[i % products.length];
                 product.innerHTML = `
-                    <img src="https://source.unsplash.com/200x200/?product,${i}" alt="Product ${i}">
-                    <h3>Product ${i}</h3>
-                    <p>PKR ${Math.floor(Math.random() * 5000) + 500}</p>
+                    <img src="${item.image}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>PKR ${item.price}</p>
+                    <button class="add-to-cart">Add to Cart</button>
                 `;
                 productContainer.appendChild(product);
             }
