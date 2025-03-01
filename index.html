@@ -54,7 +54,7 @@
         }
         .hero {
             position: relative;
-            background: url('https://source.unsplash.com/1600x900/?online,earning') no-repeat center center/cover;
+            background: url('https://source.unsplash.com/1600x900/?business,earnings') no-repeat center center/cover;
             height: 400px;
             display: flex;
             flex-direction: column;
@@ -91,6 +91,42 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            width: 220px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 16px;
+            color: #bbb;
+        }
+        .add-to-cart {
+            background: red;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
@@ -123,7 +159,29 @@
         <button class="register-btn">Register Now</button>
     </section>
     
-    <!-- WhatsApp Button -->
+    <div class="product-container">
+        <script>
+            const products = [
+                { name: "Men's Formal Suit", image: "https://source.unsplash.com/220x220/?suit", price: "PKR 15,000" },
+                { name: "Bridal Dress", image: "https://source.unsplash.com/220x220/?wedding,dress", price: "PKR 50,000" },
+                { name: "Laptop", image: "https://source.unsplash.com/220x220/?laptop", price: "PKR 80,000" },
+                { name: "Makeup Kit", image: "https://source.unsplash.com/220x220/?makeup", price: "PKR 5,000" },
+                { name: "Kids Clothing", image: "https://source.unsplash.com/220x220/?kids,clothing", price: "PKR 3,500" },
+                { name: "Leather Bag", image: "https://source.unsplash.com/220x220/?leather,bag", price: "PKR 6,000" }
+            ];
+            for (let i = 0; i < products.length; i++) {
+                document.write(`
+                    <div class="product">
+                        <img src="${products[i].image}" alt="${products[i].name}">
+                        <h3>${products[i].name}</h3>
+                        <p>${products[i].price}</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+    
     <a href="https://wa.me/03703077696" class="whatsapp-btn">&#x1F4AC;</a>
 </body>
 </html>
