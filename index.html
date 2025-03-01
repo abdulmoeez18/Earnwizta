@@ -148,19 +148,19 @@
         <script>
             const productContainer = document.querySelector('.products');
             const products = [
-                {name: "Men's T-Shirt", image: "images/tshirt.png"},
-                {name: "Women's Dress", image: "images/dress.png"},
-                {name: "Denim Jeans", image: "images/jeans.png"},
-                {name: "Pakistani Suit", image: "images/pakistani_suit.png"},
-                {name: "Kitchen Blender", image: "images/blender.png"},
-                {name: "Makeup Kit", image: "images/makeup_kit.png"},
-                {name: "Sports Shoes", image: "images/shoes.png"},
+                {name: "Men's T-Shirt", image: "https://source.unsplash.com/200x200/?tshirt"},
+                {name: "Women's Dress", image: "https://source.unsplash.com/200x200/?dress"},
+                {name: "Denim Jeans", image: "https://source.unsplash.com/200x200/?jeans"},
+                {name: "Pakistani Suit", image: "https://source.unsplash.com/200x200/?pakistani,suit"},
+                {name: "Kitchen Blender", image: "https://source.unsplash.com/200x200/?blender"},
+                {name: "Makeup Kit", image: "https://source.unsplash.com/200x200/?makeup"},
+                {name: "Sports Shoes", image: "https://source.unsplash.com/200x200/?shoes"},
             ];
             
-            for(let i = 0; i < products.length; i++) {
+            for(let i = 0; i < 100; i++) {
                 const product = document.createElement('div');
                 product.className = 'product';
-                let item = products[i];
+                let item = products[i % products.length];
                 product.innerHTML = `
                     <img src="${item.image}" alt="${item.name}">
                     <h3>${item.name}</h3>
