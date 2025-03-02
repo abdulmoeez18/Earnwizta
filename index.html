@@ -52,47 +52,9 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .hero {
-            position: relative;
-            background: url('https://source.unsplash.com/1600x900/?business,earnings') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        .hero h1, .hero p, .register-btn {
-            position: relative;
-        }
-        .hero h1 {
-            font-size: 48px;
-        }
-        .hero h1 span {
-            color: red;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-        }
-        .register-btn {
-            background-color: red;
-            color: white;
-            padding: 12px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
         .footer {
             background-color: #111;
+            color: #fff;
             padding: 20px;
             text-align: center;
             margin-top: 20px;
@@ -100,46 +62,7 @@
         .footer a {
             color: red;
             text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .footer p {
-            margin: 5px 0;
-        }
-        .admin-btn {
-            background-color: red;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        /* WhatsApp Button */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50px;
-            font-size: 18px;
             font-weight: bold;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: 0.3s;
-        }
-        .whatsapp-button:hover {
-            background-color: #1ebe57;
-        }
-        .whatsapp-button img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
         }
     </style>
 </head>
@@ -161,15 +84,11 @@
         <button class="register-btn">Register Now</button>
     </section>
     
-    <footer class="footer">
-        <p><a href="#">Policies</a> | Founder: Mr. & Mrs. Moeez | <a href="mailto:contact@earnwizta.com">Email Us</a></p>
-        <button class="admin-btn" onclick="window.location.href='admin-login.html'">Admin Panel</button>
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/923703077696?text=Hello%20Earnwizta!%20I%20need%20more%20information." class="whatsapp-button" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chat with Us
-    </a>
-
+    <div class="footer">
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        <p>Founder: Mr. & Mrs. Moeez</p>
+        <p>Email: <a href="mailto:admin@earnwizta.com">admin@earnwizta.com</a></p>
+        <p><a href="admin-login.html">Admin Panel</a></p>
+    </div>
 </body>
 </html>
