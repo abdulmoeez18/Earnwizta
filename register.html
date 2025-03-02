@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnwizta Registration</title>
+    <style>
+        body { text-align: center; background-color: black; color: white; font-family: Arial, sans-serif; }
+        .button { background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; }
+        .form-container { display: none; background: #222; padding: 20px; border-radius: 10px; width: 300px; margin: auto; }
+        input, select, button { width: 100%; padding: 10px; margin: 5px 0; }
+        .whatsapp-btn { background-color: green; }
+        .dashboard-btn { background-color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to <span style="color: red;">Earnwizta</span></h1>
+    <p>Pakistan's first online earning platform, where you sell our products and earn limitless</p>
+    <button class="button" onclick="showForm()">Register Now</button>
+
+    <div class="form-container" id="registerForm">
+        <h2>Register</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email" required>
+        <select required>
+            <option value="">Select City</option>
+            <option>Karachi</option>
+            <option>Lahore</option>
+            <option>Islamabad</option>
+        </select>
+        <input type="password" placeholder="Password" required>
+        <h3>Payment Method</h3>
+        <p>Easypaisa: 03703077696</p>
+        <p>Faysal Bank: 3276301000001265</p>
+        <button class="whatsapp-btn" onclick="sendPaymentProof()">Send Payment Proof</button>
+        <button class="dashboard-btn" onclick="enterDashboard()">Enter Your Dashboard</button>
+    </div>
+
+    <script>
+        function showForm() {
+            document.getElementById("registerForm").style.display = "block";
+        }
+        function sendPaymentProof() {
+            window.open("https://wa.me/923703077696?text=I%20have%20sent%20the%20payment%20proof.", "_blank");
+        }
+        function enterDashboard() {
+            alert("Redirecting to dashboard...");
+        }
+    </script>
+</body>
+</html>
